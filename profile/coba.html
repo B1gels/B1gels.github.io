@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .gambar {
+        border: 1px solid;
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    .gambar img {
+        width: 100%;
+        object-fit: contain;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .tombol {
+        width: 100%;
+        margin-left: 50px;
+    }
+
+    button {
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        border: none;
+        border: 1px solid;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    .tombol img {
+        width: 80px;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: top;
+
+    }
+
+    .gambar img:last-child {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="content">
+        <div class="gambar">
+            <img id="img1" src="img/kimono.png" alt="kobo1">
+            <img id="img2" src="img/skin1.png" alt="kobo2">
+        </div>
+        <div class="tombol">
+            <button onclick="showImage(1)"><img src="img/kimono.png" alt="kobo1"></button>
+            <button onclick="showImage(2)"><img src="img/skin1.png" alt="kobo1"></button>
+        </div>
+    </div>
+
+    <script>
+        function showImage(imageNumber) {
+            if (imageNumber === 1) {
+                document.getElementById('img1').style.display = 'block';
+                document.getElementById('img2').style.display = 'none';
+            } else if (imageNumber === 2) {
+                document.getElementById('img1').style.display = 'none';
+                document.getElementById('img2').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
