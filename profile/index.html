@@ -18,7 +18,7 @@
     </header>
     <main>
         <section>
-            <article>
+            <article class="page-1" id="page-1">
                 <div class="data-profile">
                     <div class="title">
                         <h1>Kobo Kanaeru</h1>
@@ -159,7 +159,7 @@
                     </div>
                 </div>
             </article>
-            <article>
+            <article class="page-2" id="page-2">
                 <div class="profile">
                     <h1>Kobo Kanaeru</h1>
                     <hr>
@@ -174,20 +174,25 @@
                                            <iframe src="https://www.youtube.com/embed/-BvizyVVhxw?si=u9JBfBXyqjfe7mZg" 
                         title="Kobo-Kanaeru first debut" frameborder="0"></iframe>
                 </div>
-            </article>
-            <article>
-                <div class="gambar">
-                    <div class="gambar-profile"></div>
-                    <div class="gambar-ganti">
-                        <button><img src="img/casual.png" alt="skin cassual"></button>
-                        <button><img src="img/skin1.png" alt="skin penari"></button>
-                        <button><img src="img/skin1.png" alt="kimono"></button>
+                <div class="kobo-skin">
+                    <div class="tombol">
+                        <button onclick="tampilkanGambar('gambar1')"><img src="img/casual.png" alt="gambar"></button>
+                        <button onclick="tampilkanGambar('gambar2')"><img src="img/skin1.png" alt="gambar"></button>
+                        <button onclick="tampilkanGambar('gambar3')"><img src="img/skin2.png" alt="gambar"></button>
+                        <button onclick="tampilkanGambar('gambar4')"><img src="img/skin3.png" alt="gambar"></button>
+                    </div>
+                    <div class="skin" id="gambarContainer">
+                        <img src="img/casual.png"id="gambar1" alt="gambar"/>
+                        <img src="img/skin1.png" id="gambar2" alt="gambar" style="display: none;" />
+                        <img src="img/skin2.png" id="gambar3" alt="gambar" style="display: none;"/>
+                        <img src="img/skin3.png" id="gambar4" alt="gambar" style="display: none;"/>
                     </div>
                 </div>
             </article>
         </section>
     </main>
     <script src="https://kit.fontawesome.com/131b4a7fa1.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 
 </body>
 
